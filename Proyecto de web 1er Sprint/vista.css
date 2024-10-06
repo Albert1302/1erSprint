@@ -1,0 +1,58 @@
+body{
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+    background-color: #f6eced;
+}
+/*Titulo de la Pagina Principal*/
+.encabezado {  
+  font-family: Poppins;
+  font-size: 20px;
+  overflow:hidden;
+  margin-bottom: 20px;
+  text-align: center;
+  width:100%;
+  /*Lineamiento del titulo con la imagen*/
+    h1,img{
+    display: inline-block;
+    vertical-align: middle;
+          }
+
+}
+/*Menu de seleccion*/
+.barradenavegacion {
+  font-family: Roboto;
+  display:flex; /* Usar flexbox para alinear elementos */
+  justify-content:center; /* Centrar elementos horizontalmente */
+  background:#8b4513;/*Fondo del menu de opciones*/
+  padding: 20px;
+  width:100%;
+}
+/*Componentes del menu*/
+.barradenavegacion a{
+  color: white;  
+  padding: 10px 60px; /*Codigo de separacion (verticalmente) (horizontalmente)*/
+  text-decoration: none; /*Tipo de subrayado ninguno*/
+  transition: background-color 0.35s;
+}
+.barradenavegacion a:hover{
+  background-color: #f6c496;
+}
+.anuncios{
+    overflow: hidden;
+    padding: 100px 0px; /*Codigo de separacion (verticalmente) (horizontalmente)*/
+    width: 100%; /*Tamaño de la imagen*/
+    max-width: 800px; /*Maximo del tamaño de la imagen*/
+    margin: 0 auto;
+}
+.Cambio{
+    display: flex;
+    transition: transform 1s ease; /*Temporizador de navegacion*/
+    img{
+        width: 100%;
+    }
+}
+.derechos{
+    font-family: Akshar;
+    font-size: 15px;
+    text-align: center;
+}
