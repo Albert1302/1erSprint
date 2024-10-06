@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+  <!-- SECCION DEL ENCABEZADO Y LOGO-->
+  <header class="encabezado"> 
+    <div class="logoquirqui">
+        <img src="RUTA DE IMAGEN.jpg" alt="Logo de quirqui-tur">
+        <h1><em>QUIRQUI-TUR</em></h1>
+    </div>
+  </header>
+  <!--SECCION DE LA BARRA DE NAVEGACION-->   
+    <div class="barradenavegacion">
+      <nav class="barradelosenlaces">
+        <a href="#inicio">inicio</a>
+        <a href="#Gescontrenido">Ges.Contenido</a>
+        <a href="#Transporte">Transporte</a>
+        <a href="#SitosTuristicos">Sitios Turisticos</a>
+        <a href="#Carnaval">Carnaval</a>
+        <a href="#Oruro">Oruro</a>
+        <a href="#Info.ayuda">Inf.Ayuda</a>
+      </nav>
+    </div>
+  <!--SECCION DE ANUNCIOS DE ABAJO-->
+  <div class="anuncios">
+    <div class="Cambio">
+        <img  src="RUTA DE IMAGEN1.jpg" alt="ANUNCIO1">
+        <img  src="RUTA DE IMAGEN2.jpg"  alt="ANUNCIO2">
+        <img  src="RUTA DE IMAGEN3.jpg"  alt="ANUNCIO3">
+    </div>
+  </div>
+  <!--SECCION DEL CAMBIO DE ANUNCIO CADA 3 SEGUNDOS-->
+  <script>
+    const images = ['RUTA DE IMAGEN1.jpg', 'RUTA DE IMAGEN2.jpg', 'RUTA DE IMAGEN3.jpg'];
+    let index = 0;
+    const slider = document.querySelector('.Cambio');
+    setInterval(() => {
+        index = (index + 1) % images.length; 
+        slider.style.transform = `translateX(-${index * 100}%)`; // Desplaza a la izquierda
+    }, 3000); //cada 3 segundos
+  </script>
+  <!--DERECHOS DE AUTOR :v-->
+  <footer class="derechos">
+    <p>&copy; 2024 Quirqui-Tur. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
