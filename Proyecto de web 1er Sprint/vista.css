@@ -39,19 +39,23 @@ body{
 }
 .anuncios{
     overflow: hidden;
-    padding: 100px 0px; /*Codigo de separacion (verticalmente) (horizontalmente)*/
+    padding: 50px 0; /*Codigo de separacion (verticalmente) (horizontalmente)*/
     width: 100%; /*Tamaño de la imagen*/
     max-width: 800px; /*Maximo del tamaño de la imagen*/
     margin: 0 auto;
 }
-.Cambio{
+.Cambio {
     display: flex;
-    transition: transform 1s ease; /*Temporizador de navegacion*/
-    img{
-        width: 100%;
-    }
+    transition: transform 1s ease; /* Animación de transición */
+    width: 100%; /* Ya que tienes 3 imágenes, el contenedor debe ser 3 veces más ancho */
+}
+
+.Cambio img {
+    width: 100%; /* Cada imagen ocupará el 100% del contenedor de anuncios */
+    flex-shrink: 0; /* Esto evita que las imágenes se compriman */
 }
 .derechos{
+    margin-top: 50px;
     font-family: Akshar;
     font-size: 15px;
     text-align: center;
