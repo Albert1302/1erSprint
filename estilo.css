@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    /* Sin margen */
+    padding: 0;
+    /* Sin relleno */
+    background-color: #f6eced;
+}
+
+/* Titulo de la Pagina Principal */
+.encabezado {
+    font-family: Poppins;
+    font-size: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+
+    /* Lineamiento del titulo con la imagen */
+    h1,
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/* Menu de seleccion */
+.barradeNavegacion {
+    font-family: Roboto;
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    justify-content: center;
+    /* Centrar elementos horizontalmente */
+    background: #8b4513;
+    /* Fondo del menu de opciones */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Componentes del menu */
+.barradeNavegacion a {
+    color: white;
+    padding: 10px 60px;
+    /* Codigo de separacion (verticalmente) (horizontalmente) */
+    text-decoration: none;
+    /* Tipo de subrayado ninguno */
+    transition: background-color 0.35s;
+}
+
+.barradeNavegacion a:hover {
+    background-color: #f6c496;
+}
+
+/* gestión ---------------------------------------------------- */
+/* titulo */
+.titulo-gestion {
+    font-family: Poppins;
+    text-align: center;
+    /* Asegura que el título esté centrado */
+    margin: 0;
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+/* posiciona el buscador de gestion */
+.buscador-contenido {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+}
+
+/* input */
+#gesBuscar {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+}
+
+.btn-gesBuscar {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-gesBuscar:hover {
+    background-color: #f6c496;
+    /* Color del botón al pasar el ratón */
+}
+
+/* el formulario */
+.form-crear-contenido {
+    font-family: Roboto, sans-serif;
+    position: relative;
+    /* para el posicionamiento del título */
+    width: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    background-color: #f6c496;
+    border-radius: 5px;
+    margin: 20px 200px 20px 20px;
+    /* Cambiando se mueve de lugar */
+}
+
+/* alinea el contenido */
+.form-crear-contenido .form-gst {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* detalles label e input */
+.form-crear-contenido label {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+/* más detalles del contenido */
+.form-crear-contenido input[type="text"],
+.form-crear-contenido input[type="date"],
+.form-crear-contenido select,
+.form-crear-contenido textarea,
+.form-crear-contenido input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el título del formulario */
+.titulo-formulario {
+    font-family: Poppins;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    margin: 0;
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+/* turismo ......................... */
+/* ESTILIZADO DE SITIOS TURISTICOS */
+/* Estilo general de la sección */
+.seccion {
+    width: 90%;
+    /* Ocupa el 90% del ancho de la pantalla */
+    margin: 0 auto;
+    /* Centra la sección horizontalmente */
+    text-align: center;
+    /* Centra el contenido dentro de la sección */
+}
+
+/* Título principal */
+.seccion h1 {
+    font-family: Poppins;
+    text-align: center;
+    /* Cambiado a 'center' para centrar el título */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor para el texto de búsqueda y el botón */
+.seccion div:first-of-type {
+    display: flex;
+    /* Alinea el input y el botón en una fila */
+    justify-content: right;
+    /* Centra el input y el botón en el contenedor */
+    margin-bottom: 20px;
+    /* Añade un espacio inferior */
+}
+
+/* Contenedor para el filtro de sitios turísticos */
+.seccion div:nth-of-type(2) {
+    display: flex;
+    /* Usa flexbox para alinear los elementos */
+    justify-content: flex-start;
+    /* Alinea a la izquierda */
+    margin-bottom: 20px;
+    /* Espacio inferior entre el filtro y el siguiente contenido */
+    width: 100%;
+    /* Ancho completo del contenedor */
+}
+
+/* Estilo del select (filtro) */
+.seccion #sittipo {
+    width: 200px;
+    /* Ancho del select */
+    justify-content: flex-start;
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    background-color: #f6eced;
+    /* Color de fondo del select */
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+}
+
+/* Contenedor para la imagen de anuncio */
+.seccion .anuncio {
+    display: flex;
+    /* Flexbox para el contenedor del anuncio */
+    justify-content: center;
+    /* Centra la imagen del anuncio */
+    margin-top: auto;
+    /* Espacio superior para separar el anuncio del contenido anterior */
+}
+
+/* Imagen del anuncio */
+.seccion .anuncio img {
+    align-items: baseline;
+    /* Alineado en la base de abajo */
+    max-width: 100%;
+    /* La imagen no excederá el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    /* Bordes redondeados para la imagen */
+}
+
+/* Estilo para los derechos de autor */
+.derechos {
+    font-family: Akshar, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f6c496;
+    left: 0;
+    /* Alinea al lado izquierdo */
+    bottom: 0;
+    /* Alinea al fondo */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+}

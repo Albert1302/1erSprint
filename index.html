@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <title>Menu - Quirqui-Tur</title>
+</head>
+
+<body>
+    <div id="script"> <!-- Aquí se inicializa vue-->
+
+        <!-- SECCION DEL ENCABEZADO Y LOGO-->
+        <header class="encabezado">
+            <div class="logoquirqui">
+                <img src="/img/QUIRQUI_saluda.png" 
+                alt="imagenes" class="logo-img"
+                width="120px" height="120px">
+                <h1><em>QUIRQUI-TUR</em></h1>
+            </div>
+        </header>
+
+        <!--SECCION DE LA BARRA DE NAVEGACION-->
+        <div class="barradeNavegacion">
+            <nav class="barradelosenlaces">
+                <a href="#" @click.prevent="selectTab('inicio')" class="nav-enlace">Inicio</a>
+                <a href="#" @click.prevent="selectTab('gesContenido')" class="nav-enlace">Ges. Contenido</a>
+                <a href="#" @click.prevent="selectTab('transporte')" class="nav-enlace">Transporte</a>
+                <a href="#" @click.prevent="selectTab('sitiosTuristicos')" class="nav-enlace">Sitios Turísticos</a>
+                <a href="#" @click.prevent="selectTab('carnaval')" class="nav-enlace">Carnaval</a>
+                <a href="#" @click.prevent="selectTab('oruro')" class="nav-enlace">Oruro</a>
+                <a href="#" @click.prevent="selectTab('infoAyuda')" class="nav-enlace">Inf. Ayuda</a>
+            </nav>
+        </div>
+
+        <!--SECCION DE CONTENIDOS-->
+        <!--INICIO-->
+        <div v-if="TAB === 'inicio'" class="seccion">
+            <img src="RUTA DE IMAGEN.jpg" alt="imagenes de inicio" class="inicio-img">
+            <!--Rotacion de imagen-->
+        </div>
+        <!--GESTION DE CONTENIDO-->
+        <div v-if="TAB === 'gesContenido'" class="seccion">
+            <h1 class="titulo-gestion">Gestion de contenido</h1>
+            <div class="buscador-contenido">
+                <input type="text" id="gesBuscar" name="buscar" placeholder="Buscar.." required></imput>
+                <!--aqui se puede añadir un icono en placeholder-->
+                <button type="submit" class="btn-gesBuscar">Buscar</button>
+            </div>
+            <div class="logo-gestion">
+                <img src="RUTA DE IMAGEN.jpg" alt="logo de gestion" class="gesLogo">
+            </div>
+            <form class="form-crear-contenido">
+                <h2 class="titulo-formulario">Crear un nuevo contenido</h2>
+                <div class="form-gst">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="gesNombre" name="nombre" required>
+                </div>
+
+                <div class="form-gst">
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="gesTipo" required>
+                        <option value="">Selecciona un tipo</option>
+                        <option value="tipo1">tipo 1</option>
+                        <option value="tipo2">tipo 2</option>
+                        <option value="tipo3">tipo 3</option>
+                    </select>
+                </div>
+
+                <div class="form-gst">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="gesFecha" name="fecha" required>
+                </div>
+
+                <div class="form-gst">
+                    <label for="imagen">Subir Imagen</label>
+                    <input type="file" id="gesImagen" name="imagen" accept="image/*" required>
+                </div>
+
+                <div class="form-gst">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea name="descripcion" id="gesDescripcion" rows="4" required></textarea>
+                </div>
+
+                <div class="form-gst">
+                    <button type="submit" class="btn-gesCrear">Crear y Subir</button>
+                </div>
+            </form>
+        </div>
+        <!--TRANSPORTE-->
+        <div v-if="TAB === 'transporte'" class="seccion">
+            <h1>TRANSPORTE</h1>
+            <img src="RUTA DE IMAGEN.jpg" alt="quirqui-tur confundido" class="transporte-img">
+            <form class="form-transporte">
+                <div class="form-tran">
+                    <label for="origen">Origen:</label>
+                    <input type="text" id="origen" name="origen" required>
+                </div>
+
+                <div class="form-tran">
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" required>
+                </div>
+
+                <div class="form-tran">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="tranFecha" name="fecha" required>
+                </div>
+
+                <div class="form-tran">
+                    <button type="submit" class="btn-tranBuscar">Buscar:</button>
+                </div>
+            </form>
+            <div class="lista-empresas">
+                <button type="submit" class="btn-lista-empresas">LISTA DE
+                    EMPRESAS</button><!--Aqui saca una lista de empresas-->
+            </div>
+        </div>
+        <!--SITIOS TURISTICOS-->
+        <div v-if="TAB === 'sitiosTuristicos'" class="seccion">
+            <h1>LOS PRINCIPALES SITIOS TURISTICO</h1>
+            <div>
+                <input type="text" id="sitbuscar" name="buscar" placeholder="Buscar.." required></input>
+                <!--aqui se puede añadir un icono en placeholder-->
+                <button type="submit">Buscar</button>
+            </div>
+            <!--SLIDERS CAROUSEL EN JAVASCRIT O VUE JS INVESTIGAR MAS-->
+            <div>
+                <label for="tipo">Filtrar sitios turisticos:</label>
+                <select name="tipo" id="sittipo" required>
+                    <option value="">Selecciona un tipo</option>
+                    <option value="tipo1">Caminata</option>
+                    <option value="tipo2">Comida</option>
+                    <option value="tipo3">etc.</option>
+                </select>
+            </div>
+            <div class="anuncio">
+                <img src="RUTA DE IMAGEN.jpg" alt="anuncio">
+            </div>
+        </div>
+        <!--CARNAVAL-->
+        <div v-if="TAB === 'carnaval'" class="seccion">
+            <h1>HISTORIA DEL CARNAVAL DE ORURO</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima blanditiis harum animi consectetur
+                dignissimos dolor inventore reiciendis officiis autem, dolores a suscipit ratione, eius sed odit ipsum
+                quae illo sint?</h2>
+            <img src="RUTA DE IMAGEN.jpg" alt="carnaval">
+            <div>
+                <select name="danzas" id="danzas" required>
+                    <option value="">DANZAS</option>
+                    <option value="danza1">TOBAS</option>
+                    <option value="danza2">DIABLADA</option>
+                    <option value="danza3">TINKUS</option>
+                </select>
+            </div>
+        </div>
+        <!--ORURO-->
+        <div v-if="TAB === 'oruro'" class="seccion">
+            <h1>HISTORIA DE ORURO</h1>
+            <div class="container">
+                <a href="historiaor" class="info-box">HISTORIA</a>
+                <a href="ubicacionor" class="info-box">UBICACIÓN</a>
+                <a href="poblacionor" class="info-box">POBLACIÓN</a>
+                <a href="culturaor" class="info-box">CULTURA</a>
+            </div>
+        </div>
+        <!--INFORMACION DE AYUDA-->
+        <div v-if="TAB === 'infoayuda'" class="seccion">
+            <h1>INFORMACION DE AYUDA</h1>
+            <div>
+                <h2>AYUDA EN:</h2>
+                <form>
+                    <div>
+                        <label for="localidad">Localidad:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="infLocalidad" name="localidad" placeholder="Ingresa tu localidad"
+                            required>
+                    </div>
+                    <div>
+                        <select name="tipo-ayuda" id="tipo-ayuda">
+                            <option value="">TIPO DE AYUDA</option>
+                            <option value="farmacia">FARMACIA</option>
+                            <option value="policia">POLICIA</option>
+                            <option value="ambulancia">AMBULANCIA</option>
+                            <option value="otros">OTROS</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">buscar</button>
+                    </div>
+                </form>
+                <div class="anuncio">
+                    <img src="RUTA DE IMAGEN.jpg" alt="anuncio" style="max-width: 100%;">
+                </div>
+                <!--AQUI UN LISTADO DE AYUDA COMO SE MUESTRA EN -->
+                <div class="resultados">
+                    <h2>LISTADOS DE AYUDA DE LA BASE DE DATOS</h2>
+                </div>
+            </div>
+        </div>
+
+        <!--DERECHOS DE AUTOR-->
+        <footer class="derechos">
+            <p>&copy; 2024 Quirqui-Tur. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
